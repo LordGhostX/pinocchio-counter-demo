@@ -1,0 +1,104 @@
+{
+  "version": "0.1.0",
+  "name": "pinocchio_demo",
+  "instructions": [
+    {
+      "name": "Create",
+      "accounts": [
+        {
+          "name": "owner",
+          "isMut": true,
+          "isSigner": true,
+          "docs": ["Counter Owner Account"]
+        },
+        {
+          "name": "counter",
+          "isMut": true,
+          "isSigner": false,
+          "docs": ["Counter Account"]
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 0
+      }
+    },
+    {
+      "name": "Increment",
+      "accounts": [
+        {
+          "name": "counter",
+          "isMut": true,
+          "isSigner": false,
+          "docs": ["Counter Account"]
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 1
+      }
+    },
+    {
+      "name": "ReadCounter",
+      "accounts": [
+        {
+          "name": "counter",
+          "isMut": false,
+          "isSigner": false,
+          "docs": ["Counter Account"]
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 2
+      }
+    },
+    {
+      "name": "Delete",
+      "accounts": [
+        {
+          "name": "owner",
+          "isMut": true,
+          "isSigner": true,
+          "docs": ["Counter Owner Account"]
+        },
+        {
+          "name": "counter",
+          "isMut": true,
+          "isSigner": false,
+          "docs": ["Counter Account"]
+        }
+      ],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 3
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Counter",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "value",
+            "type": "u64"
+          },
+          {
+            "name": "owner",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "origin": "shank",
+    "address": "Ping111111111111111111111111111111111111111"
+  }
+}

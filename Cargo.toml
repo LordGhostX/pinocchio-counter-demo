@@ -1,0 +1,13 @@
+[package]
+name = "pinocchio-demo"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+bytemuck = { version = "1.23.1", features = ["derive"] }
+pinocchio = "0.9.0"
+pinocchio-pubkey = "0.3.0"
+shank = "0.4.3"
